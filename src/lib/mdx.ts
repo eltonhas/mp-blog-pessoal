@@ -11,7 +11,11 @@ export const getPostBySlug = async (slug: string) => {
 
   const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
 
-  const { frontmatter, content } = await compileMDX({
+  const { frontmatter, content } = await compileMDX<{
+    title: string
+    description: string
+    createdAt: string
+  }>({
     source: fileContent,
     options: { parseFrontmatter: true },
   })
