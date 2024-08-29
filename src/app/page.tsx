@@ -26,7 +26,7 @@ export default async function Home() {
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-col gap-4 px-8 pt-4 md:px-0">
-      {/* {posts.map((post) => (
+      {posts.map((post) => (
         <PostCard
           slug={post.folder}
           createdAt={post.meta.createdAt}
@@ -34,7 +34,7 @@ export default async function Home() {
           title={post.meta.title}
           key={post.meta.title}
         />
-      ))} */}
+      ))}
     </main>
   )
 }
